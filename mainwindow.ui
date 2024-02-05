@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>827</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simple Qt DiceRoller</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="diceSelectionBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>125</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>125</height>
+         </size>
+        </property>
+        <property name="title">
+         <string>Dice Selection</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="diceSelectVBox">
+           <item>
+            <layout class="QHBoxLayout" name="topDiceSelectHBox">
+             <item>
+              <widget class="QPushButton" name="addD4Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D4</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d4.png</normaloff>:/images/icons/d4.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addD6Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D6</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d6.png</normaloff>:/images/icons/d6.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addD8Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D8</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d8.png</normaloff>:/images/icons/d8.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addD10Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D10</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d10.png</normaloff>:/images/icons/d10.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="bottomDiceSelectHBox">
+             <item>
+              <widget class="QPushButton" name="addD12Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D12</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d12.png</normaloff>:/images/icons/d12.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addD20Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D20</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d20.png</normaloff>:/images/icons/d20.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addD100Button">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>D100</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/images/icons/d100.png</normaloff>:/images/icons/d100.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addCustomButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Custom</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="totalLabel">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>36</pointsize>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="totalLabelLabel">
+             <property name="text">
+              <string>Total</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="diceArea">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>541</width>
+           <height>357</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="diceAreaLayout"/>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="rollDiceButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Roll 'Em</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="historyLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>History:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="historyEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>DejaVu Sans Mono</family>
+         </font>
+        </property>
+        <property name="undoRedoEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>827</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_DiceRoller">
+    <property name="title">
+     <string>&amp;DiceRoller</string>
+    </property>
+    <addaction name="actionClear_Dice"/>
+    <addaction name="actionClear_History"/>
+    <addaction name="separator"/>
+    <addaction name="action_Quit"/>
+   </widget>
+   <addaction name="menu_DiceRoller"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionClear_Dice">
+   <property name="text">
+    <string>Clear &amp;Dice</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionClear_History">
+   <property name="text">
+    <string>Clear &amp;History</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>addD4Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addD6Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD6()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addCustomButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addCustomDie()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addD100Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD100()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addD20Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD20()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addD12Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD12()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>70</x>
+     <y>124</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addD10Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD10()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addD8Button</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addD8()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rollDiceButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>rollEm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>416</x>
+     <y>544</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>414</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Quit</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_Dice</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>clearWidgets()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClear_History</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>clearHistory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addD4()</slot>
+  <slot>addD6()</slot>
+  <slot>addD8()</slot>
+  <slot>addD10()</slot>
+  <slot>addD12()</slot>
+  <slot>addD20()</slot>
+  <slot>addD100()</slot>
+  <slot>addCustomDie()</slot>
+  <slot>rollEm()</slot>
+  <slot>clearHistory()</slot>
+  <slot>clearWidgets()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/"/>
+    <qresource prefix="/images/icons">
+        <file>d4.png</file>
+        <file>d6.png</file>
+        <file>d8.png</file>
+        <file>d10.png</file>
+        <file>d12.png</file>
+        <file>d20.png</file>
+        <file>d100.png</file>
+    </qresource>
+</RCC>
