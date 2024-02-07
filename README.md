@@ -11,4 +11,4 @@ will not extend far beyond the already existing code base. This is because it is
 would be undermined by continuous code changes and increasing complexity.
 
 This code is released in the hope that it will be useful for new C++ developers looking to understand how to develop
-applications using Qt. Please email Ezekiel at zeke at kirhut.com with any recommendations of imporovements!
+applications using Qt.

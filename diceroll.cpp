@@ -51,7 +51,7 @@ DiceRoll::DiceRoll(uint8_t amount, uint16_t face, int32_t perDieAdd,
 {
 	while (amount--)
 	{
-		rolls.emplace_back(gen.roll(faces));
+		rolls.emplace_back(gen.roll(face));
 	}
 }
 
