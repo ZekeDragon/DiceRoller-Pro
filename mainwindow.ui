@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>mainWindow</class>
- <widget class="QMainWindow" name="mainWindow">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -460,15 +460,24 @@
    <property name="text">
     <string>Clear &amp;Dice</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
   </action>
   <action name="action_Quit">
    <property name="text">
     <string>&amp;Quit</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
   </action>
   <action name="actionClear_History">
    <property name="text">
     <string>Clear &amp;History</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
    </property>
   </action>
  </widget>
@@ -479,7 +488,7 @@
   <connection>
    <sender>addD4Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD4()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -495,7 +504,7 @@
   <connection>
    <sender>addD6Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD6()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -511,7 +520,7 @@
   <connection>
    <sender>addCustomButton</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addCustomDie()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -527,7 +536,7 @@
   <connection>
    <sender>addD100Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD100()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -543,7 +552,7 @@
   <connection>
    <sender>addD20Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD20()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -559,7 +568,7 @@
   <connection>
    <sender>addD12Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD12()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -575,7 +584,7 @@
   <connection>
    <sender>addD10Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD10()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -591,7 +600,7 @@
   <connection>
    <sender>addD8Button</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>addD8()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -607,7 +616,7 @@
   <connection>
    <sender>rollDiceButton</sender>
    <signal>clicked()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>rollEm()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -621,25 +630,9 @@
    </hints>
   </connection>
   <connection>
-   <sender>action_Quit</sender>
-   <signal>triggered()</signal>
-   <receiver>mainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>413</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>actionClear_Dice</sender>
    <signal>triggered()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>clearWidgets()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -655,7 +648,7 @@
   <connection>
    <sender>actionClear_History</sender>
    <signal>triggered()</signal>
-   <receiver>mainWindow</receiver>
+   <receiver>MainWindow</receiver>
    <slot>clearHistory()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -681,5 +674,6 @@
   <slot>rollEm()</slot>
   <slot>clearHistory()</slot>
   <slot>clearWidgets()</slot>
+  <slot>appQuit()</slot>
  </slots>
 </ui>

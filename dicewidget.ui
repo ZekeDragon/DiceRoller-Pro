@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string notr="true">Form</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="spacing">
@@ -63,13 +63,13 @@
         </font>
        </property>
        <property name="inputMask">
-        <string>09</string>
+        <string extracomment="This is an input mask specifying the number of digits that can be entered. It should translate to roughly 2 digits.">09</string>
        </property>
        <property name="text">
         <string notr="true">1</string>
        </property>
        <property name="cursorPosition">
-        <number>2</number>
+        <number>0</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

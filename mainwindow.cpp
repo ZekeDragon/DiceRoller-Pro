@@ -34,6 +34,7 @@ public:
 		diceLayout = dynamic_cast<QVBoxLayout *>(ui.diceAreaLayout);
 		if (!diceLayout) throw false;
 		historyCursor = QTextCursor(ui.historyEdit->document());
+		QObject::connect(ui.action_Quit, SIGNAL(triggered(bool)), QApplication::instance(), SLOT(quit()));
 	}
 
 	void connectNewDiceWidget(int index, DiceWidget *dw)
@@ -51,7 +52,7 @@ public:
 	}
 
 	MainWindow *top;
-	Ui::mainWindow ui;
+	Ui::MainWindow ui;
 	QVBoxLayout *diceLayout;
 	QTextCursor historyCursor;
 };
@@ -148,7 +149,7 @@ void MainWindow::rollEm()
 		}
 	}
 
-	QString output = tr("Roll Results:\n");
+	QString output = tr("Roll Results:") + "\n";
 	int64_t total = 0;
 	for (DiceRoll const &roll : rolls)
 	{
@@ -158,9 +159,9 @@ void MainWindow::rollEm()
 		uint32_t offset = rollOutput.length();
 		for (uint8_t die = 0; die < roll.numberOfDice; ++die)
 		{
-			rollOutput += QString::number(roll.rollAt(die)) + " + " +
-			              QString::number(roll.addDie) + " * " +
-			              QString::number(roll.multDie) + " = " +
+			rollOutput += QString::number(roll.rollAt(die)) + tr(" + ") +
+			              QString::number(roll.addDie) + tr(" * ") +
+			              QString::number(roll.multDie) + tr(" = ") +
 			              QString::number(roll.rollTotal(die)) + "\n";
 			if (die)
 			{
@@ -172,15 +173,15 @@ void MainWindow::rollEm()
 			rollOutput = "";
 		}
 
-		QString totalOutput = "Total: ";
+		QString totalOutput = tr("Total: ");
 		if (totalOutput.length() < offset)
 		{
 			totalOutput = totalOutput.leftJustified(offset);
 		}
 
-		totalOutput += QString::number(rollSum) + " + " +
-		               QString::number(roll.addRoll) + " * " +
-		               QString::number(roll.multRoll) + " = " +
+		totalOutput += QString::number(rollSum) + tr(" + ") +
+		               QString::number(roll.addRoll) + tr(" * ") +
+		               QString::number(roll.multRoll) + tr(" = ") +
 		               QString::number(roll.total()) + "\n";
 		output.append(totalOutput);
 		total += roll.total();
@@ -188,7 +189,7 @@ void MainWindow::rollEm()
 
 	QString totalStr = QString::number(total);
 	im->ui.totalLabel->setText(totalStr);
-	output += "\nGrand Total: " + totalStr + "\n\n";
+	output += "\n" + tr("Grand Total: ") + totalStr + "\n\n";
 	im->historyCursor.insertText(output);
 	im->historyCursor.setPosition(0);
 }

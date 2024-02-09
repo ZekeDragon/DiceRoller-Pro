@@ -18,6 +18,8 @@
 ***********************************************************************************************************************/
 #include "mainwindow.hpp"
 
+#include <algorithm>
+
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
@@ -25,16 +27,25 @@
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-
+	QStringList args = a.arguments();
 	QTranslator translator;
-	const QStringList uiLanguages = QLocale::system().uiLanguages();
-	for (const QString &locale : uiLanguages) {
+	QStringList uiLanguages = QLocale::system().uiLanguages();
+	if (auto localeLoc = std::find(args.begin(), args.end(), "--locale");
+	    localeLoc != args.end() && ++localeLoc != args.end())
+	{
+		uiLanguages.push_front(*localeLoc);
+	}
+
+	for (const QString &locale : uiLanguages)
+	{
 		const QString baseName = "DiceRoller-Pro_" + QLocale(locale).name();
-		if (translator.load(":/i18n/" + baseName)) {
+		if (translator.load(":/i18n/" + baseName))
+		{
 			a.installTranslator(&translator);
 			break;
 		}
 	}
+
 	MainWindow w;
 	w.show();
 	return a.exec();

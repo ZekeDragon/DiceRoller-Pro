@@ -33,7 +33,7 @@ DiceWidget::DiceWidget(unsigned int dieType, QWidget *parent) :
 	im->type = dieType;
 	im->amount = 1;
 	im->ui.setupUi(this);
-	im->ui.diceTypeLabel->setText("d" + QString::number(dieType));
+	im->ui.diceTypeLabel->setText(tr("d") + QString::number(dieType));
 }
 
 DiceWidget::DiceWidget(const DiceWidget &other) :
@@ -45,7 +45,7 @@ DiceWidget::DiceWidget(const DiceWidget &other) :
 	Ui::DiceWidget &myUi = im->ui,
 	               &otherUi = other.im->ui;
 	myUi.setupUi(this);
-	myUi.diceTypeLabel->setText("d" + QString::number(im->type));
+	myUi.diceTypeLabel->setText(tr("d") + QString::number(im->type));
 	myUi.numDiceLineEdit->setText(otherUi.numDiceLineEdit->text());
 	myUi.perDieAddSpinBox->setValue(otherUi.perDieAddSpinBox->value());
 	myUi.perDieMultSpinBox->setValue(otherUi.perDieMultSpinBox->value());

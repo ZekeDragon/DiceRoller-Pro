@@ -12,9 +12,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
-set(TS_FILES DiceRoller-Pro_en_US.ts)
+set(TS_FILES
+        DiceRoller-Pro_en.ts
+        DiceRoller-Pro_es.ts
+        DiceRoller-Pro_fr.ts
+        DiceRoller-Pro_ko.ts
+)
 
-set(PROJECT_SOURCES
+set(SOURCE_FILES
         main.cpp
         mainwindow.cpp
         mainwindow.hpp
@@ -24,6 +29,10 @@ set(PROJECT_SOURCES
         dicewidget.ui
         diceroll.hpp
         diceroll.cpp
+)
+
+set(PROJECT_SOURCES
+        ${SOURCE_FILES}
         icons.qrc
         ${TS_FILES}
 )
@@ -38,7 +47,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 
-    qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
+    qt_add_translations(DiceRoller-Pro TS_FILES ${TS_FILES} SOURCES ${SOURCE_FILES})
 else()
     if(ANDROID)
         add_library(DiceRoller-Pro SHARED
